@@ -15,4 +15,10 @@ class ProgramController extends AbstractController
             'website' => 'Wild Series',
         ]);
     }
+
+    #[Route('/program/back', name: 'program_back')]
+    public function backToIndex(): Response
+    {
+        return $this->redirectToRoute('app_index');
+    }
 }
